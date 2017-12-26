@@ -1,38 +1,25 @@
 {
   "name": "coderplex-api",
   "description": "Coderplex.org API server",
-  "version": "0.0.0",
-  "homepage": "",
+  "version": "0.1.0",
+  "homepage": "https://github.com/coderplex/coderplex-backend-nodejs#readme",
   "main": "src",
-  "keywords": [
-    "feathers"
-  ],
-  "author": {
-    "name": "Vinay Puppal",
-    "email": "me@vinaypuppal.com"
-  },
+  "keywords": ["feathers"],
+  "author": "Vinay Puppal <me@vinaypuppal.com>",
   "contributors": [],
-  "bugs": {},
   "directories": {
-    "lib": "src",
-    "test": "test/"
+    "test": "test"
   },
   "engines": {
     "node": ">= 6.0.0",
     "yarn": ">= 0.18.0"
   },
   "scripts": {
-    "test": "npm run lint && npm run mocha",
-    "lint": "npm run prettier && standard --fix",
-    "prettier": "prettier 'src/**/*.js' 'test/**/*.js' --write --single-quote --no-semi",
+    "test": "npm run mocha",
+    "lint":
+      "prettier 'src/**/*.js' 'test/**/*.js' --write --single-quote --no-semi && xo --fix",
     "start": "node src/",
     "mocha": "mocha test/ --recursive --watch"
-  },
-  "standard": {
-    "env": [
-      "node",
-      "mocha"
-    ]
   },
   "dependencies": {
     "body-parser": "^1.17.2",
@@ -66,6 +53,14 @@
     "prettier": "^1.9.2",
     "request": "^2.81.0",
     "request-promise": "^4.2.1",
-    "standard": "^10.0.2"
+    "xo": "^0.18.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderplex/coderplex-backend-nodejs.git"
+  },
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/coderplex/coderplex-backend-nodejs/issues"
   }
 }
